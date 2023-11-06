@@ -6,7 +6,7 @@
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:12:59 by rtonar            #+#    #+#             */
-/*   Updated: 2023/10/30 16:54:00 by rtonar           ###   ########.fr       */
+/*   Updated: 2023/11/04 18:05:37 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 
+	if (start > (unsigned int)ft_strlen(s))
+		return (NULL);
 	ptr = malloc(len + 1);
 	if (ptr == NULL)
 		return (NULL);

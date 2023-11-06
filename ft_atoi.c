@@ -6,7 +6,7 @@
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:26:51 by rtonar            #+#    #+#             */
-/*   Updated: 2023/11/01 17:14:42 by rtonar           ###   ########.fr       */
+/*   Updated: 2023/11/04 16:06:05 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,34 +18,6 @@
 **/
 
 #include "libft.h"
-
-/* int	ft_atoi(const char *str)
-{
-	int		result;
-	int		i;
-	int		is_negative;
-
-	is_negative = 0;
-	result = 0;
-	i = 0;
-	while (str[i] == ' ' )
-		i++;
-	if (str[i] == '-')
-	{
-		is_negative = !is_negative;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9' )
-	{
-		result = result * 10 + str[i] - '0';
-		i++;
-	}
-	if (is_negative)
-	{
-		result = -result;
-	}
-	return (result);
-} */
 
 int	ft_atoi(const char *str)
 {

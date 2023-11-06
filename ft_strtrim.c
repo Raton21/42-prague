@@ -6,7 +6,7 @@
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:46:45 by rtonar            #+#    #+#             */
-/*   Updated: 2023/10/30 17:18:08 by rtonar           ###   ########.fr       */
+/*   Updated: 2023/11/04 17:39:58 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	char	*ptr;
 
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	i = 0;
 	len = ft_strlen(s1);
 	while (is_sep(s1[len - 1], set))

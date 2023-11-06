@@ -6,27 +6,11 @@
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:05:47 by rtonar            #+#    #+#             */
-/*   Updated: 2023/11/01 16:28:41 by rtonar           ###   ########.fr       */
+/*   Updated: 2023/11/04 16:04:07 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* char	*ft_strchr(const char *s, int c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			return ((char *)s + i);
-		}
-		i++;
-	}
-	return (NULL);
-} */
 
 char	*ft_strchr(const char *s, int i)
 {

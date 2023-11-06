@@ -6,9 +6,14 @@
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:59:04 by rtonar            #+#    #+#             */
-/*   Updated: 2023/10/25 15:15:44 by rtonar           ###   ########.fr       */
+/*   Updated: 2023/11/04 16:02:51 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/**
+ *	The ft_memcmp() function compares 2 strings of memory
+ *
+**/
 
 #include "libft.h"
 

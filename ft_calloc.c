@@ -6,7 +6,7 @@
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:39:46 by rtonar            #+#    #+#             */
-/*   Updated: 2023/10/30 09:46:20 by rtonar           ###   ########.fr       */
+/*   Updated: 2023/11/06 17:27:21 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	*ft_calloc(size_t num_elements, size_t element_size)
 	size_t			i;
 
 	i = 0;
+	if ((num_elements * element_size) / element_size != num_elements)
+		return (NULL);
 	total_size = num_elements * element_size;
 	ptr = malloc(total_size);
 	if (ptr != NULL)
