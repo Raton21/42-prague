@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 16:25:19 by rtonar            #+#    #+#             */
-/*   Updated: 2023/10/24 20:12:46 by rtonar           ###   ########.fr       */
+/*   Created: 2023/11/14 19:36:21 by rtonar            #+#    #+#             */
+/*   Updated: 2023/11/14 19:39:15 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	if (lst != NULL && del != NULL)
 	{
-		i++;
+		(*del)(lst->content);
+		free(lst);
 	}
-	return (i);
 }
-
-/* #include <stdio.h>
-int main()
-{
-	char test[]="MySmallString";
-	printf("length is %d",ft_strlen(test));
-
-	return (0);
-} */

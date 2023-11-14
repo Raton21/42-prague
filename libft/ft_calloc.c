@@ -1,55 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rtonar <rtonar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 15:46:45 by rtonar            #+#    #+#             */
-/*   Updated: 2023/11/04 17:39:58 by rtonar           ###   ########.fr       */
+/*   Created: 2023/11/14 19:37:08 by rtonar            #+#    #+#             */
+/*   Updated: 2023/11/14 19:37:10 by rtonar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_sep(char c, const char *charset)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	i;
+	void	*ptr;
+	size_t	max;
 
-	i = 0;
-	while (charset[i])
+	if (nmemb == 0 || size == 0)
 	{
-		if (c == charset[i])
-		{
-			return (1);
-		}
-		i++;
+		ptr = malloc(0);
+		return (ptr);
 	}
-	return (0);
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	int		len;
-	int		i;
-	char	*ptr;
-
-	if (!s1)
+	max = nmemb * size;
+	if (max / nmemb != size)
 		return (NULL);
-	if (!set)
-		return (ft_strdup(s1));
-	i = 0;
-	len = ft_strlen(s1);
-	while (is_sep(s1[len - 1], set))
-		len--;
-	while (is_sep(s1[i], set))
-	{
-		i++;
-		len--;
-	}
-	ptr = malloc(len + 1);
-	if (ptr == NULL)
+	ptr = malloc(nmemb * size);
+	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, s1 + i, len + 1);
+	ft_bzero(ptr, size * nmemb);
 	return (ptr);
 }
